@@ -36,7 +36,7 @@ const Player = () => {
     playbackRates: [0.5, 1, 1.5, 2],
     sources: [
       {
-        src: `http://54.200.59.37:4000/movie/${id}`,
+        src: `https://nhuloz.xyz/movie/${id}`,
         type: "video/mp4",
       },
     ],

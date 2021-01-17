@@ -12,7 +12,7 @@ const MovieMenu = () => {
   useEffect(() => {
     async function fetchVideo() {
       try {
-        const res = await axios.get("http://54.200.59.37:4000/movies");
+        const res = await axios.get("https://nhuloz.xyz/movies");
         const data = res.data;
         setMovies([...data]);
         shuffleArray(data);
