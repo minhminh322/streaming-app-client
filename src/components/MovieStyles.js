@@ -1,11 +1,20 @@
 import styled from "styled-components";
 
+export const MovieHome = styled.div`
+
+`
 export const MovieWrapper = styled.div`
   /* max-height: 200px; */
+  display: flex;
+  flex-direction: column;
   width: 95%;
   /* height: 60vh; */
 `;
 
+export const Title = styled.h1`
+  /* background-color: green; */
+  font-size: ${({size}) => size};
+`
 export const MoviePosters = styled.div`
   display: flex;
   overflow-y: hidden;
@@ -18,7 +27,7 @@ export const MoviePosters = styled.div`
 `;
 
 export const MoviePoster = styled.img`
-  max-height: 350px;
+  height: ${({size}) => size};;
   object-fit: contain;
   margin-right: 10px;
   transition: transform 450ms;

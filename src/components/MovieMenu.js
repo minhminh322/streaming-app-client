@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { variants } from "../common/animations";
 import Movie from "./Movie";
-import { MovieWrapper, MoviePosters } from "./MovieStyles";
+import { MovieHome, MovieWrapper, Title, MoviePosters } from "./MovieStyles";
 
 const MovieMenu = () => {
   const [movies, setMovies] = useState([]);
@@ -25,23 +25,23 @@ const MovieMenu = () => {
   }, []);
 
   return (
-    <>
+  <>
       <MovieWrapper>
-        <h1>Recently</h1>
+        <Title size="2em">Recently</Title>
         <motion.div initial="initial" animate="animate" exit="exit" variants={variants.container}>
           <MoviePosters>
             {movies.map((movie) => (
-              <Movie key={movie.id} id={movie.id} title={movie.title} backgroundUrl={movie.background}></Movie>
+              <Movie key={movie.id} id={movie.id} title={movie.title} backgroundUrl={movie.background} size="35vh"></Movie>
             ))}
           </MoviePosters>
         </motion.div>
       </MovieWrapper>
       <MovieWrapper>
-        <h3>My Library</h3>
+        <Title size="1.25em">My Library</Title>
         <motion.div initial="initial" animate="animate" exit="exit" variants={variants.container}>
           <MoviePosters>
             {others.map((movie) => (
-              <Movie key={movie.id} id={movie.id} title={movie.title} backgroundUrl={movie.background}></Movie>
+              <Movie key={movie.id} id={movie.id} title={movie.title} backgroundUrl={movie.background} size="20vh"></Movie>
             ))}
           </MoviePosters>
         </motion.div>
